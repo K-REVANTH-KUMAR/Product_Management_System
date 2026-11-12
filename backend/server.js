@@ -10,7 +10,10 @@ const productRoutes = require("./routes/productRoutes");
 const app = express();
 
 app.use(cors({
-    origin: "http://localhost:5173"
+    origin: [
+        "http://localhost:5173",
+        "https://product-management-system-eta-virid.vercel.app"
+    ]
 }));
 
 app.use(express.json());
